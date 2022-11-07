@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <TextView
+        android:id="@+id/titleV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="325dp"
+        android:text="Title"
+        android:textColor="#E91E63"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/titleT"
+        android:layout_width="213dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Enter Title"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/titleV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toEndOf="@+id/titleV"
+        app:layout_constraintTop_toTopOf="@+id/titleV"
+        app:layout_constraintVertical_bias="0.611" />
+
+    <TextView
+        android:id="@+id/descriptionV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Description"
+        android:textColor="#E91E63"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/titleV"
+        app:layout_constraintTop_toBottomOf="@+id/titleV" />
+
+    <EditText
+        android:id="@+id/descriptionT"
+        android:layout_width="211dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Enter Description"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/descriptionV"
+        app:layout_constraintEnd_toEndOf="@+id/titleT"
+        app:layout_constraintStart_toStartOf="@+id/titleT"
+        app:layout_constraintTop_toTopOf="@+id/descriptionV" />
+
+    <Button
+        android:id="@+id/dateB"
+        android:layout_width="127dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="50dp"
+        android:onClick="dateClick"
+        android:text="Select Date"
+        app:layout_constraintStart_toStartOf="@+id/descriptionV"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionV" />
+
+    <EditText
+        android:id="@+id/dateT"
+        android:layout_width="212dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:hint="dd/mm/yyyy"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/dateB"
+        app:layout_constraintEnd_toEndOf="@+id/descriptionT"
+        app:layout_constraintStart_toStartOf="@+id/descriptionT"
+        app:layout_constraintTop_toTopOf="@+id/dateB" />
+
+    <Button
+        android:id="@+id/timeB"
+        android:layout_width="126dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="50dp"
+        android:onClick="timeClick"
+        android:text="select time"
+        app:layout_constraintEnd_toEndOf="@+id/dateB"
+        app:layout_constraintStart_toStartOf="@+id/dateB"
+        app:layout_constraintTop_toBottomOf="@+id/dateB" />
+
+    <EditText
+        android:id="@+id/timeT"
+        android:layout_width="215dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="hh:mm"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/timeB"
+        app:layout_constraintEnd_toEndOf="@+id/dateT"
+        app:layout_constraintStart_toStartOf="@+id/dateT"
+        app:layout_constraintTop_toTopOf="@+id/timeB" />
+
+    <Button
+        android:id="@+id/addB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="44dp"
+        android:onClick="addClick"
+        android:text="ADD"
+        app:layout_constraintStart_toStartOf="@+id/timeB"
+        app:layout_constraintTop_toBottomOf="@+id/timeT" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Add Reminder"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cancelB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:onClick="cancelClick"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/addB"
+        app:layout_constraintEnd_toEndOf="@+id/timeT"
+        app:layout_constraintTop_toTopOf="@+id/addB"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
